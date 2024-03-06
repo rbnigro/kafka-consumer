@@ -20,10 +20,6 @@ public class KafkaConsumerConfig {
 	@Autowired
 	private KafkaProperties kafkaProperties;
 	
-	public KafkaConsumerConfig() {
-
-	}
-	
 	@Bean
 	ProducerFactory<String, String> producerFactory(){
 		Map<String, Object> properties = kafkaProperties.buildProducerProperties();
