@@ -20,19 +20,8 @@ public class KafkaConsumerConfig {
 	@Autowired
 	private KafkaProperties kafkaProperties;
 	
-	@Value("${spring.kafka.producer.pagamento.request.topic.v1}") 
+	@Value("${app.kafka.producer.pagamento.request.topic.v1}")
 	private String pagamentoRequestTopicV1;
-	
-	@Bean
-	ProducerFactory<String, String> producerFactory(){
-		Map<String, Object> properties = kafkaProperties.buildProducerProperties();
-		return new DefaultKafkaProducerFactory<>(properties);
-	}
-	
-	@Bean
-	KafkaTemplate<String, String> kafkaTemplate() {
-		return new KafkaTemplate<>(producerFactory());
-	}
 	
 	@Bean
 	NewTopic pagamentoRequestTopicBuilder() {

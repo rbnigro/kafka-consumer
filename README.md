@@ -1,7 +1,13 @@
 # kafka-Consumer
 Utilizando Spring
 
-## Subir Serviços
+# Subir Serviços
+
+## 🧠 Visão mental
++ Producer → envia mensagem para um topic
++ Broker (Kafka) → armazena
++ Consumer → lê do topic
++ Consumer Group → controla paralelismo e offset
 
 ### Iniciar Zookeeper
 + cd\kafka\bin\windows
@@ -28,9 +34,9 @@ Utilizando Spring
 
 ### Criar Eventos
 + cd\kafka\bin\windows<br>
-+ kafka-console-producer.bat --topic --broker-list  pagamento.request.topic.v1 --bootstrap-server localhost:9092
++ kafka-console-producer.bat --broker-list localhost:9092 --topic pagamento.request.topic.v1
 
 ### Ler Eventos
 + cd\kafka_2.13-3.6.1\bin\windows
-+ kafka-console-consumer.bat --topic pagamento.request.topic.v1 --from-beginning --bootstrap-server localhost:9092
++ .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pagamento.request.topic.v1 --from-beginning
 > > > > Para pegar as mensagens desde o início. As que estão armazenadas no disco (--from-beginning)
