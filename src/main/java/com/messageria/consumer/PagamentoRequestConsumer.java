@@ -14,8 +14,10 @@ public class PagamentoRequestConsumer {
     }
 
     @KafkaListener(topics = "${app.topic.pagamento}", groupId = "pagamentos-group-v2")
-    public void listen(PagamentoDTO pagamento) {
-        System.out.println("CHEGOU DTO: " + pagamento);
+    public void listen(PagamentoDTO pagamentoDTO) {
+        pagamentoDTO.setDescricao(pagamentoDTO.getDescricao() + " [PROCESSADO]");
+
+        System.out.println("CHEGOU DTO: " + pagamentoDTO);
     }
 
 }
