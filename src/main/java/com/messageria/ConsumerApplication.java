@@ -1,4 +1,4 @@
-package main.java.com.messageria;
+package com.messageria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -34,9 +34,9 @@ Utilizando Spring
 
 ### Criar Eventos
 + cd\kafka\bin\windows<br>
-+ kafka-console-producer.bat --broker-list localhost:9092 --topic pagamento.request.topic.v1
++ kafka-console-producer.bat --broker-list localhost:9092 --topic pagamento.request.topic.v2
 
 ### Ler Eventos
 + cd\kafka_2.13-3.6.1\bin\windows
-+ .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pagamento.request.topic.v1 --from-beginning
++ .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic pagamento.request.topic.v2 --from-beginning
 > > > > Para pegar as mensagens desde o início. As que estão armazenadas no disco (--from-beginning)
